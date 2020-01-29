@@ -65,8 +65,8 @@ public class OperationsController {
 		return new ResponseEntity<ResponseWrapper>(HttpStatus.OK);
 	}
 
-	@PostMapping("/clientChecking")
-	public ResponseEntity<ResponseWrapper> makeClientChecking(@RequestParam(name="clientId", required = true) long clientId, @RequestParam(name="dateFrom", required = false) Date dateFrom, @RequestParam(name="dateTo", required = false) Date dateTo)
+	@PostMapping("/clientStatement")
+	public ResponseEntity<ResponseWrapper> getClientStatement(@RequestParam(name="clientId", required = true) long clientId, @RequestParam(name="dateFrom", required = false) Date dateFrom, @RequestParam(name="dateTo", required = false) Date dateTo)
 	{
 		Summary summary = null;
 		try {
